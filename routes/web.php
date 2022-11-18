@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CalendarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/', [CalendarController::class, 'index'])->name('index')->middleware('auth');
+Route::post('/calendars', [CalendarController::class, 'store'])->name('store')->middleware('auth');
+Route::get('/calendars/create', [CalendarController::class, 'create'])->name('create')->middleware('auth');
+Route::get('/calendars/{calendar}',[CalendarController::class, 'show'])->name('show')->middleware('auth');
+
+
+
+
+
+require __DIR__.'/auth.php';

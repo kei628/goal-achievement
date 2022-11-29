@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <title>Calendar</title>
+        <title>Goal</title>
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -11,24 +11,30 @@
     <body>
         <x-app-layout>
         <h1>Calendar</h1>
-        <form action="/calendars" method="POST">
+        <form action="/goals" method="POST">
         @csrf
-        <div class="day">
-            <h2>day</h2>
-            <input name="calendar[day]" placeholder="日付"/>
+         <div class="targetDate">
+            <h2>target date</h2>
+            {{ $goal->targetDate }}
         </div>
-        <div class="stamp">
-            <h2>stamp</h2>
-            <input  name="calendar[stamp]" placeholder="スタンプ"/>
+        <div class="totle">
+            <h2>title</h2>
+            {{ $goal->title }}
         </div>
         <div class="body">
             <h2>body</h2>
-            <textarea name="calendar[body]" placeholder="今日したこと"/></textarea>
+            {{ $goal->body }}
         </div>
-        <div class="memo">
-            <h2>memo</h2>
-            <textarea name="calendar[memo]" placeholder="日記"></textarea>
+        <div class="reward">
+            <h2>reward</h2>
+            {{ $goal->reward }}
         </div>
+        <div class="penalty">
+            <h2>penalty</h2>
+            {{ $goal->penalty }}
+        </div>
+        <div class="edit"><a href="/goals/{{ $goal->id }}/edit">edit</a></div>
+        
        
         <input type="submit" value="store"/>
         </form>

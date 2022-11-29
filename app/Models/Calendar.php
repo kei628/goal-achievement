@@ -14,6 +14,9 @@ class Calendar extends Model
     'stamp',
     'body',
     'memo',
+    'start_date',
+    'end_date',
+    'event_name',
 ];
     
     public function user()

@@ -12,7 +12,7 @@ class CalendarController extends Controller
     public function index(Calendar $calendar,Goal $goal)
     {
         return view('calendars/index')-> with(['calendars' => $calendar->get()])
-                                      -> with(['goals' => $goal->get()]);
+                                      -> with(['goal' => $goal->oldest()->first()]);
     }
     public function create()
     {

@@ -6,19 +6,20 @@
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('/css/style.css/') }}" >
 
     </head>
+    <x-app-layout>
     <body>
-        <x-app-layout>
-        <h1>Calendar</h1>
+        <div class=container>
         <form action="/goals" method="POST">
         @csrf
          <div class="targetDate">
             <h2>target date</h2>
             {{ $goal->targetDate }}
         </div>
-        <div class="totle">
-            <h2>title</h2>
+        <div class="title">
+            <h2>goal</h2>
             {{ $goal->title }}
         </div>
         <div class="body">
@@ -33,16 +34,28 @@
             <h2>penalty</h2>
             {{ $goal->penalty }}
         </div>
-        <div class="edit"><a href="/goals/{{ $goal->id }}/edit">edit</a></div>
-        
-       
-        <input type="submit" value="store"/>
-        </form>
-        <div class="footer">
-            <a href="/">戻る</a>
+        <div class="flex">
+        <div class="btn edit"><a href="/goals/{{ $goal->id }}/edit">edit</a></div>
+        <form action="/goals/{{ $goal->id }}" id="form_{{ $goal->id }}" method="post">
+                @csrf
+                @method('DELETE')
+                <div class="btn delete">
+                <button type="button" onclick="deleteGoal({{ $goal->id }})">delete</button></div>
+                <script>
+                    function deleteGoal(id) {
+                        'use strict'
+                        
+                        if (confirm('削除すると復元できません。\n本当に削除しますか？')){
+                            document.getElementById(`form_${id}`).submit();
+                        }
+                    }
+                </script>
+            </form>
+        <div class="btn store">
+        <input type="submit" value="store"/></div>
         </div>
-        
-        </x-app-layout>
-       
+            <a class="btn back" href="/">back</a>
+    </div>
     </body>
+    </x-app-layout>
 </html>

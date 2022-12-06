@@ -6,31 +6,39 @@
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('/css/style.css/') }}" >
 
     </head>
     <body>
         <x-app-layout>
-            <form action="/calendars/{{ $calendar->id }}" method="POST">
-                @csrf
-                @method('PUT')
-                <h1>Calendar</h1>
-                <h1 class="stamp">
-                <select name="calendar[stamp]">
-                    <option value="○">○</option>
-                    <option value="△">△</option>
-                    <option value="×">×</option>
-                </select>
-                </h1>
-                <h1 class="body">
-                    <input name='calendar[body]' value="{{ $calendar->body }}">
-                </h1>
-                <h1 class="memo">
-                    <input name='calendar[memo]' value="{{ $calendar->memo }}">
-                </h1>
-                <div class="footer">
-                    <input type="submit" value="store"/>
-                    <a href="/">戻る</a>
-                </div>
+            <div class=container>
+                <form action="/calendars/{{ $calendar->id }}" method="POST">
+                    @csrf
+                    @method('PUT')
+                   <div class="stamp">
+                        <h2>Level of achievement</h2>
+                        <select name="calendar[stamp]">
+                            <option value="〇">〇</option>
+                            <option value="△">△</option>
+                            <option value="✕">✕</option>
+                        </select>
+                    </div>
+                    <div class="body">
+                        <h2>body</h2>
+                        <input name='calendar[body]' value="{{ $calendar->body }}">
+                    </div>
+                    <div class="memo">
+                        <h2>memo</h2>
+                        <input name='calendar[memo]' value="{{ $calendar->memo }}">
+                    </div>
+                    <br>
+                    <div class="btn store">
+                        <input type="submit" value="store"/>
+                    </div>
+                </form>
+                <br>
+                <a class="btn back" href="/calendars/{{ $calendar->id }}">back</a>
+            </div>
         </x-app-layout>
        
     </body>

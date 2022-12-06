@@ -63,7 +63,7 @@ let calendar = new Calendar(calendarEl, {
             })
             .catch(() => {
                 // バリデーションエラーなど
-                alert("登録に失敗しました");
+                //alert("登録に失敗しました");
             });
           
             

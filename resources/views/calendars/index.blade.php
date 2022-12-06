@@ -16,25 +16,20 @@
     <body>
         <x-app-layout>
             <x-slot name="header">
-            index
+            Calendar
             </x-slot>
-            <h1>Calendar</h1>
-            <div class='goal'>
-                <!--goalの表示-->
-                <a href='/goals/index'>goal</a>
-                @foreach($goals as $goal)
-                <h1>{{ $goal->body }}</h1>
-                @endforeach
-            </div>
-            <div id='calendar'></div>
-            <div class='calendar'>
-                <a href='/calendars/create'>create</a>
-                @foreach ($calendars as $calendar)
-                <h2 class='day'><a href="/calendars/{{ $calendar->id }}">{{ $calendar->day }}</a></h2>
-                <h1 class='stamp'>{{ $calendar->stamp }}</h1>
-                <h2 class='body'>{{ $calendar->body }}</h2>
-                <h2 class='memo'>{{ $calendar->memo }}</h2>
-                @endforeach
+            <div class=container>
+                <br>
+                <div class='top-wrapper'>
+                    <!--goalの表示-->
+                    <h3>~{{ $goal->targetDate }}までの目標~</h3>
+                    <h1>☆{{ $goal->title}}</h1>
+                </div>
+                <br>
+                <div id='calendar'>
+                </div>
+                <div class="footer">
+                </div>
             </div>
         </x-app-layout>
        <!-- Micromodal.js -->

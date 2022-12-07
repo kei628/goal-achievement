@@ -15,12 +15,14 @@ return new class extends Migration
     {
         Schema::create('calendars', function (Blueprint $table) {
             $table->id();
-            $table->string('day', 50);
-            $table->string('stamp', 50);
-            $table->string('body', 200);
-            $table->string('memo', 50);
+            $table->string('stamp', 50)->nullable();
+            $table->string('body', 200)->nullable();
+            $table->string('memo', 50)->nullable();
+            $table->date('start_date')->comment('開始日');
+            $table->date('end_date')->comment('終了日');
             $table->timestamps();
             $table->softDeletes();
+        
         });
     }
 

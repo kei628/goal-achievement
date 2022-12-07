@@ -6,27 +6,33 @@
 
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <link rel="stylesheet" href="{{ asset('/css/modal.css/') }}" >
+
+
 
     </head>
     <body>
         <x-app-layout>
-        <h1>Calendar</h1>
-        <x-slot name="header">
-            index
-        </x-slot>
-        <div id='calendar'></div>
-        <div class='calendar'>
-            <a href='/calendars/create'>create</a>
-            @foreach ($calendars as $calendar)
-            
-            <h2 class='day'><a href="/calendars/{{ $calendar->id }}">{{ $calendar->day }}</a></h2>
-            <h1 class='stamp'>{{ $calendar->stamp }}</h1>
-            <h2 class='body'>{{ $calendar->body }}</h2>
-            <h2 class='memo'>{{ $calendar->memo }}</h2>
-            @endforeach
-        </div>
+            <x-slot name="header">
+            Calendar
+            </x-slot>
+            <div class=container>
+                <br>
+                <div class='top-wrapper'>
+                    <!--goalの表示-->
+                    <h3>~{{ $goal->targetDate }}までの目標~</h3>
+                    <h1>☆{{ $goal->title}}</h1>
+                </div>
+                <br>
+                <div id='calendar'>
+                </div>
+                <div class="footer">
+                </div>
+            </div>
         </x-app-layout>
-       
+       <!-- Micromodal.js -->
+        @include('calendars.modal')
     </body>
 </html>

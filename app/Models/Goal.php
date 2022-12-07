@@ -9,8 +9,17 @@ class Goal extends Model
 {
     use HasFactory;
     
+    protected $fillable = [
+    'targetDate',
+    'title',
+    'body',
+    'reward',
+    'penalty',
+];
+    
     public function user()
 {
     return $this->belongsTo(User::class);
 }
+
 }

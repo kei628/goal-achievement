@@ -1,0 +1,47 @@
+@charset "utf-8";
+html{
+    font-size: 85%;
+}
+
+.container{
+    font-size: 120%;
+    width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.btn{
+    display: inline-block;
+    padding: 1px 11px;
+    color: white;
+    opacity:0.8;
+    border-radius: 4px;
+}
+.create{
+    background-color: #75A9FF;
+    cursor:pointer;
+    box-shadow:0 3px #136FFF;
+}
+.edit{
+    background-color: #4689FF;
+    cursor:pointer;
+    box-shadow:0 3px #336699;
+}
+.delete{
+    background-color: #CC0000;
+    cursor:pointer;
+    box-shadow:0 3px #993333;
+}
+.back{
+    background-color: #f778b8;
+    cursor:pointer;
+    box-shadow:0 3px #e04893;
+}
+.store{
+    background-color: #f778b8;
+    cursor:pointer;
+    box-shadow:0 3px #e04893;
+}
+.flex{
+    display:flex;
+    margin:20px 0;
+}

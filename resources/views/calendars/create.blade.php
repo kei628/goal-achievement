@@ -10,7 +10,6 @@
     </head>
     <body>
         <x-app-layout>
-        <h1>Calendar</h1>
         <form action="/calendars" method="POST">
         @csrf
         <div class="day">
@@ -23,17 +22,18 @@
         </div>
         <div class="body">
             <h2>body</h2>
-            <textarea name="calendar[body]" placeholder="目標"/></textarea>
+            <textarea name="calendar[body]" placeholder="今日したこと"/></textarea>
         </div>
         <div class="memo">
             <h2>memo</h2>
-            <textarea name="calendar[memo]" placeholder="今日したこと"></textarea>
+            <textarea name="calendar[memo]" placeholder="日記"></textarea>
         </div>
-       
-        <input type="submit" value="store"/>
         </form>
-        <div class="footer">
-            <a href="/">戻る</a>
+        <div class="btn">
+        <div class="store">
+            <input type="submit" value="store"/>
+        </div>
+            <a class="back" href="/">back</a>
         </div>
         
         </x-app-layout>

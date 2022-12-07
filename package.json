@@ -3,7 +3,8 @@
     "scripts": {
         "dev": "vite",
         "build": "vite build",
-        "watch": "vite build --watch"
+        "watch": "vite build --watch",
+        "heroku-postbuild": "npm run build"
 
     },
     "devDependencies": {
@@ -22,9 +23,5 @@
         "@fullcalendar/daygrid": "^5.11.3",
         "@fullcalendar/interaction": "^5.11.3"
     }
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build",
-        "heroku-postbuild": "npm run build"
-    },
+  
 }

@@ -22,9 +22,7 @@
                 <br>
                 <div class='top-wrapper'>
                     <!--goalの表示-->
-                    <h3>~{{ $goal->targetDate }}までの目標~</h3>
-                    <h1>☆{{ $goal->title}}</h1>
-                </div>
+    禁止                </div>
                 <br>
                 <div id='calendar'>
                 </div>

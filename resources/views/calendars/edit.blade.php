@@ -7,6 +7,7 @@
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('/css/style.css/') }}" >
+        .compute-1.amazonaws.com:5432/df0seitk24hkb5levtech_kei:~/environment/goal-achievement (master) $ heroku config:set DB_HOST=ec2-54-86-224-85
 
     </head>
     <body>

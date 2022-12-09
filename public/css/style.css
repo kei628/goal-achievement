@@ -1,10 +1,10 @@
-@charset "utf-8";
+
 html{
     font-size: 85%;
 }
 
 .container{
-    font-size: 120%;
+    /*font-size: 120%;*/
     padding: 0 130px;
     margin: 0 auto;
 }
@@ -40,7 +40,7 @@ html{
     cursor:pointer;
     box-shadow:0 3px #e04893;
 }
-.flex{
+.yoko{
     display:flex;
     margin:20px 0;
 }

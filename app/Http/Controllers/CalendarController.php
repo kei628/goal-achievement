@@ -22,8 +22,8 @@ class CalendarController extends Controller
     {
         $input = $request['calendar'];
         $calendar->fill($input);
-         $calendar->start_date = $request->input('start_date');
-         $calendar->end_date = $request->input('end_date');
+        $calendar->start_date = $request->input('start_date');
+        $calendar->end_date = $request->input('end_date');
          
         // $calendar->event_name = $request->input('event_name');
         $calendar->save();

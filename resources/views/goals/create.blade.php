@@ -39,7 +39,6 @@
                         <input type="submit" value="store"/>
                     </div>
                 </form>
-                    
                     <br>
                     <a class="btn back" href="/">back</a>
             </div>

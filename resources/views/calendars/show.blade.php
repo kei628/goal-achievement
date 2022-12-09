@@ -25,7 +25,7 @@
                     <h2>memo</h2>
                     {{ $calendar->memo }}
                 </div>
-                <div class="flex">
+                <div class="yoko">
                     <div class="btn edit"><a href="/calendars/{{ $calendar->id }}/edit">edit</a></div>
                     <form action="/calendars/{{ $calendar->id }}" id="form_{{ $calendar->id }}" method="post">
                             @csrf
@@ -43,7 +43,6 @@
                     </form>
                 </div>
                 <a class="btn back" href="/">back</a>
-            </div>
         </x-app-layout>
        
     </body>

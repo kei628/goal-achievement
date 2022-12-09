@@ -8,8 +8,6 @@
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link rel="stylesheet" href="{{ asset('/css/style.css/') }}" >
-
-
     </head>
     <body>
         <x-app-layout>
@@ -28,7 +26,7 @@
                     <h2 class='reward'>{{ $goal->reward }}</h2>
                     <h2>penalty</h2>
                     <h2 class='penalty'>{{ $goal->penalty }}</h2>
-                    <div class='flex'>
+                    <div class='yoko'>
                         <div class="btn edit">
                             <a href="/goals/{{ $goal->id }}/edit">edit</a>
                         </div>

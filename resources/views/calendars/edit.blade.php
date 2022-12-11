@@ -10,6 +10,7 @@
     <body>
         <x-app-layout>
             <div class=container>
+                <br>
                 <form action="/calendars/{{ $calendar->id }}" method="POST">
                     @csrf
                     @method('PUT')

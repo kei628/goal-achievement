@@ -22,8 +22,8 @@
                 <br>
                 <div class='top-wrapper'>
                     <!--goalの表示-->
-                    <h3>~{{ $goal->targetDate }}までの目標~</h3>
-                    <h1>☆{{ $goal->title}}</h1>
+                    <span class="under">~{{ $goal->targetDate }}までの目標~</span>
+                    <h1><span class="under">{{ $goal->title}}</span></h1>
                 </div>
                 <br>
                 <div id='calendar'>

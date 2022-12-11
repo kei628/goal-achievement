@@ -10,6 +10,7 @@
     <body>
         <x-app-layout>
             <div class='container'>
+                <br>
                 <form action="/goals/{{ $goal->id }}" method="POST">
                     @csrf
                     @method('PUT')
@@ -33,6 +34,7 @@
                         <h2>penalty</h2>
                         <input name='goal[penalty]' value="{{ $goal->penalty }}">
                     </div>
+                    <br>
                     <div class="btn store">
                         <input type="submit" value="store"/>
                     </div>

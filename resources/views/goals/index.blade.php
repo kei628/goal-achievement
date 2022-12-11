@@ -17,34 +17,40 @@
             <div class=container>
                 <br>
                 @foreach($goals as $goal)
-                    <h2 class='targetDate'>
-                        <a href="/goals/{{ $goal->id }}">~{{ $goal->targetDate }}までの目標~ <a>
-                    </h2>
-                    <h1 class='title'>{{ $goal->title }}</h1>
-                    <h2 class='body'>{{ $goal->body }}</h2>
-                    <h2>reward</h2>
-                    <h2 class='reward'>{{ $goal->reward }}</h2>
-                    <h2>penalty</h2>
-                    <h2 class='penalty'>{{ $goal->penalty }}</h2>
-                    <div class='yoko'>
-                        <div class="btn edit">
-                            <a href="/goals/{{ $goal->id }}/edit">edit</a>
-                        </div>
-                        <form action="/goals/{{ $goal->id }}" id="form_{{ $goal->id }}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <div class="btn delete">
-                                <button type="button" onclick="deleteGoal ({{ $goal->id }})">delete</button>
-                            </div></div>
-                            <script>
-                                function deleteGoal(id) {
-                                    'use strict'
-                                    if (confirm('削除すると復元できません。\n本当に削除しますか？')){
-                                        document.getElementById(`form_${id}`).submit();
+                <div class="box">
+                    <p>
+                        <h2 class='targetDate'>
+                            <a href="/goals/{{ $goal->id }}"><span class="under">~{{ $goal->targetDate }}までのGoal~ </span><a>
+                        </h2>
+                        <h1 class='title'>{{ $goal->title }}</h1>
+                        <h2 class='body'>{{ $goal->body }}</h2>
+                        <h2><span class="under">reward</span></h2>
+                        <h2 class='reward'>{{ $goal->reward }}</h2>
+                        <h2><span class="under">penalty</span></h2>
+                        <h2 class='penalty'>{{ $goal->penalty }}</h2>
+                        <div class='yoko'>
+                            <div class="btn edit">
+                                <a href="/goals/{{ $goal->id }}/edit">edit</a>
+                            </div>
+                            <form action="/goals/{{ $goal->id }}" id="form_{{ $goal->id }}" method="post">
+                                @csrf
+                                @method('DELETE')
+                                <div class="btn delete">
+                                    <button type="button" onclick="deleteGoal ({{ $goal->id }})">delete</button>
+                                </div>
+                                </div>
+                                <script>
+                                    function deleteGoal(id) {
+                                        'use strict'
+                                        if (confirm('削除すると復元できません。\n本当に削除しますか？')){
+                                            document.getElementById(`form_${id}`).submit();
+                                            }
                                         }
-                                    }
-                            </script>
+                                </script>
                         </form>
+                    </p>
+                </div>
+                <br>
                 @endforeach
                 <a class="btn create" href='/goals/create'>+create</a>
                 <a class="btn back" href="/">back</a>

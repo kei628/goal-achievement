@@ -4,10 +4,34 @@ html{
 }
 
 .container{
-    /*font-size: 120%;*/
+    font-size: 150%;
     padding: 0 130px;
     margin: 0 auto;
 }
+
+.box{
+   position: relative;
+    background: #fff0cd;
+    box-shadow: 0px 0px 0px 5px #fff0cd;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
+}
+.box:after{
+    position: absolute;
+    content: '';
+    right: -7px;
+    top: -7px;
+    border-width: 0 90px 90px 0;
+    border-style: solid;
+    border-color: #ffdb88 #fff #ffdb88;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+.box p{
+    margin: 20; 
+    padding: 20;
+}
+
 .btn{
     display: inline-block;
     padding: 1px 11px;
@@ -15,31 +39,37 @@ html{
     opacity:0.8;
     border-radius: 4px;
 }
+
 .create{
     background-color: #75A9FF;
     cursor:pointer;
     box-shadow:0 3px #136FFF;
 }
+
 .edit{
     background-color: #4689FF;
     cursor:pointer;
     box-shadow:0 3px #336699;
 }
+
 .delete{
     background-color: #CC0000;
     cursor:pointer;
     box-shadow:0 3px #993333;
 }
+
 .back{
     background-color: #f778b8;
     cursor:pointer;
     box-shadow:0 3px #e04893;
 }
+
 .store{
     background-color: #f778b8;
     cursor:pointer;
     box-shadow:0 3px #e04893;
 }
+
 .yoko{
     display:flex;
     margin:20px 0;

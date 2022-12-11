@@ -14,15 +14,15 @@
             <div class="container">
                 <br>
                 <div class="stamp">
-                    <h2>Level of achievement</h2>
+                    <h2><span class="under">Level of achievement</span></h2>
                     {{ $calendar->stamp }}
                 </div>
                 <div class="body">
-                    <h2>Things I have done</h2>
+                    <h2><span class="under">Things I have done</span></h2>
                     {{ $calendar->body }}
                 </div>
                 <div class="memo">
-                    <h2>memo</h2>
+                    <h2><span class="under">memo</span></h2>
                     {{ $calendar->memo }}
                 </div>
                 <div class="yoko">

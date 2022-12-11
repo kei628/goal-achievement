@@ -12,6 +12,7 @@
     <x-app-layout>
         <body>
             <div class=container>
+                <br>
                 <form action="/goals" method="POST">
                 @csrf
                  <div class="targetDate">

@@ -2,10 +2,10 @@
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
             <header class="modal__header">
-                <h2>Editing</h2>
                 <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
             </header>
             <main>
+                <br>
                 <form action="/calendars" method="POST">
                     @csrf
                     <div class="stamp">
@@ -21,7 +21,7 @@
                         <textarea name="calendar[body]" placeholder="今日したこと"/></textarea>
                     </div>
                     <div class="memo">
-                        <h2>memo</h2>
+                        <h2>Diary</h2>
                         <textarea name="calendar[memo]" placeholder="日記"></textarea>
                     </div>
                     <input type="hidden" name="start_date" id="start_date" value="">

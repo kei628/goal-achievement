@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
     <head>
         <meta charset="utf-8">
         <title>Calendar</title>
@@ -21,7 +22,7 @@
             <div class=container>
                 <br>
                 <div class='top-wrapper'>
-                    <!--goalの表示-->
+                    <!--目標の表示-->
                     <span class="under">~{{ $goal->targetDate }}までの目標~</span>
                     <h1><span class="under">{{ $goal->title}}</span></h1>
                 </div>

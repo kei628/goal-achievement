@@ -23,11 +23,11 @@
                         </select>
                     </div>
                     <div class="body">
-                        <h2>body</h2>
+                        <h2>To do</h2>
                         <input name='calendar[body]' value="{{ $calendar->body }}">
                     </div>
                     <div class="memo">
-                        <h2>memo</h2>
+                        <h2>Diary</h2>
                         <input name='calendar[memo]' value="{{ $calendar->memo }}">
                     </div>
                     <br>

@@ -8,8 +8,11 @@ html{
     padding: 0 130px;
     margin: 0 auto;
 }
-
-.box{
+.container h2{
+    font-weight:bold;
+}
+/*メモデザイン*/
+.box{                    
    position: relative;
     background: #fff0cd;
     box-shadow: 0px 0px 0px 5px #fff0cd;
@@ -22,14 +25,14 @@ html{
     content: '';
     right: -7px;
     top: -7px;
-    border-width: 0 90px 90px 0;
+    border-width: 0 80px 80px 0;
     border-style: solid;
     border-color: #ffdb88 #fff #ffdb88;
     box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 .box p{
-    margin: 20; 
-    padding: 20;
+    margin: 0; 
+    padding: 0;
 }
 
 .btn{
@@ -38,6 +41,7 @@ html{
     color: white;
     opacity:0.8;
     border-radius: 4px;
+    margin-right:7px;
 }
 
 .create{
@@ -72,5 +76,5 @@ html{
 
 .yoko{
     display:flex;
-    margin:20px 0;
+    margin:20px 5px;
 }

@@ -25,7 +25,7 @@
                         {{ $goal->title }}
                     </div>
                     <div class="body">
-                        <h2>To do</h2>
+                        <h2>Content</h2>
                         {{ $goal->body }}
                     </div>
                     <div class="reward">

@@ -39,6 +39,11 @@ html{
     opacity:0.8;
     border-radius: 4px;
 }
+.btn:active{
+  box-shadow:none;
+  position:relative;
+  top:3px;
+}
 /*目標達成度、todo、日記登録のデザイン*/
 /*storeボタンのデザイン*/
 .store{

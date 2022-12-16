@@ -43,6 +43,11 @@ html{
     border-radius: 4px;
     margin-right:7px;
 }
+.btn:active{
+  box-shadow:none;
+  position:relative;
+  top:3px;
+}
 
 .create{
     background-color: #75A9FF;

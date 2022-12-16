@@ -23,7 +23,7 @@
                         </select>
                     </div>
                     <div class="body">
-                        <h2>To do</h2>
+                        <h2>Things I have done</h2>
                         <input name='calendar[body]' value="{{ $calendar->body }}">
                     </div>
                     <div class="memo">

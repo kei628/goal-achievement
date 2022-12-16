@@ -16,23 +16,23 @@
                 <form action="/goals" method="POST">
                     @csrf
                     <div class="targetDate">
-                        <h2>target date</h2>
+                        <h2>Target date</h2>
                         <input name="goal[targetDate]" placeholder="達成目標日"/>
                     </div>
                     <div class="title">
-                        <h2>title</h2>
+                        <h2>Title</h2>
                         <input  name="goal[title]" placeholder="目標タイトル"/>
                     </div>
                     <div class="body">
-                        <h2>body</h2>
+                        <h2>Content</h2>
                         <textarea name="goal[body]" placeholder="内容"/></textarea>
                     </div>
                     <div class="reward">
-                        <h2>reward</h2>
+                        <h2>Reward</h2>
                         <textarea name="goal[reward]" placeholder="ご褒美"></textarea>
                     </div>
                     <div class="penalty">
-                        <h2>penalty</h2>
+                        <h2>Penalty</h2>
                         <textarea name="goal[penalty]" placeholder="罰"></textarea>
                     </div>
                     <div class="btn store">

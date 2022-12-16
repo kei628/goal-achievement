@@ -15,23 +15,23 @@
                     @csrf
                     @method('PUT')
                     <div class="targetDate">
-                        <h2>target date</h2>
+                        <h2>Target date</h2>
                         <input name='goal[targetDate]' value="{{ $goal->targetDate }}">
                     </div>
                     <div class="totle">
-                        <h2>title</h2>
+                        <h2>Title</h2>
                         <input name='goal[title]' value="{{ $goal->title }}">
                     </div>
                     <div class="body">
-                        <h2>body</h2>
+                        <h2>Content</h2>
                         <input name='goal[body]' value="{{ $goal->body }}">
                     </div>
                     <div class="reward">
-                        <h2>reward</h2>
+                        <h2>Reward</h2>
                         <input name='goal[reward]' value="{{ $goal->reward }}">
                     </div>
                     <div class="penalty">
-                        <h2>penalty</h2>
+                        <h2>Penalty</h2>
                         <input name='goal[penalty]' value="{{ $goal->penalty }}">
                     </div>
                     <br>

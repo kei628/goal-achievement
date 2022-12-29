@@ -6,6 +6,7 @@
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('/css/style.css/') }}" >
+        <link rel="stylesheet" href="{{ asset('/css/responsive.css/') }}" >
     </head>
     <body>
         <x-app-layout>
@@ -18,7 +19,7 @@
                         <h2>Target date</h2>
                         <input name='goal[targetDate]' value="{{ $goal->targetDate }}">
                     </div>
-                    <div class="totle">
+                    <div class="title">
                         <h2>Title</h2>
                         <input name='goal[title]' value="{{ $goal->title }}">
                     </div>

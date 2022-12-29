@@ -3,11 +3,11 @@
     <head>
         <meta charset="utf-8">
         <title>Calendar</title>
-
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link rel="stylesheet" href="{{ asset('/css/style.css/') }}" >
+        <link rel="stylesheet" href="{{ asset('/css/responsive.css/') }}" >
     </head>
     <body>
         <x-app-layout>
@@ -20,7 +20,7 @@
                 <div class="box">
                     <p>
                         <h1 class='targetDate'>
-                            <a href="/goals/{{ $goal->id }}"><span class="under">~{{ $goal->targetDate }}までのGoal~ </span><a>
+                            <a href="/goals/{{ $goal->id }}">~{{ $goal->targetDate }}までのGoal~ <a>
                         </h1>
                         <h2 class='title'>{{ $goal->title }}</h2>
                         <h1 class='body'>{{ $goal->body }}</h1>

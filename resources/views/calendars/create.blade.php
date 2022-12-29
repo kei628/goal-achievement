@@ -3,10 +3,9 @@
     <head>
         <meta charset="utf-8">
         <title>Calendar</title>
-
         <!-- Fonts -->
         <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
-
+        <link rel="stylesheet" href="{{ asset('/css/responsive.css/') }}" >
     </head>
     <body>
         <x-app-layout>

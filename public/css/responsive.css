@@ -1,0 +1,16 @@
+@media (max-width: 1000px) {
+        .container{
+        font-size:80%;
+         
+    }
+  
+}
+
+@media (max-width: 600px) {
+    .container{
+        font-size:70%;
+        padding: 0 0px;
+         margin: 0 auto;
+    }
+    
+}

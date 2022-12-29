@@ -31,15 +31,17 @@
                             <form action="/goals/{{ $goal->id }}" id="form_{{ $goal->id }}" method="post">
                                 @csrf
                                 @method('DELETE')
-                                <div class="btn delete"><button type="button" onclick="deleteGoal({{ $goal->id }})">delete</button>
-                                <script>
-                                    function deleteGoal(id) {
-                                        'use strict'
-                                        if (confirm('削除すると復元できません。\n本当に削除しますか？')){
-                                            document.getElementById(`form_${id}`).submit();
+                                <div class="btn delete">
+                                    <button type="button" onclick="deleteGoal({{ $goal->id }})">delete</button>
+                                    <script>
+                                        function deleteGoal(id) {
+                                            'use strict'
+                                            
+                                            if (confirm('削除すると復元できません。\n本当に削除しますか？')){
+                                                document.getElementById(`form_${id}`).submit();
+                                                }
                                             }
-                                        }
-                                </script>
+                                    </script>
                                 </div>
                             </form>
                         </div>

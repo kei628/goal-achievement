@@ -26,13 +26,6 @@
                     </div>
                     <input type="hidden" name="start_date" id="start_date" value="">
                     <input type="hidden" name="end_date" id="end_date" value="">
-                    
-                    <select name="calendar[evennt_name]">
-                            <option value="blue">blue</option>
-                            <option value="pink">pink</option>
-                            <option value="red">red</option>
-                        </select>
-                    
                     <div class="btn store">
                     <input type="submit" value="store"/>
                     </div>

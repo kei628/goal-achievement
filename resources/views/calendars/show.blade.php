@@ -19,11 +19,11 @@
                     </div>
                     <div class="body">
                         <h2><span class="under">Things I have done</span></h2>
-                        {{ $calendar->body }}
+                        <p>{!! nl2br(htmlspecialchars($calendar->body)) !!}</p>
                     </div>
                     <div class="memo">
                         <h2><span class="under">Diary</span></h2>
-                        {{ $calendar->memo }}
+                        <p>{!! nl2br(htmlspecialchars($calendar->memo)) !!}</p>
                     </div>
                     <div class="yoko">
                         <div class="btn edit"><a href="/calendars/{{ $calendar->id }}/edit">edit</a></div>

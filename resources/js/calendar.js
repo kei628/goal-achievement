@@ -68,6 +68,8 @@ let calendar = new Calendar(calendarEl, {
           
             
     },
+    eventColor:if(){ '#87CEFA'},
+     
       eventClick: function(info) {
           window.location.href = `/calendars/${info.event.id}`;
    }

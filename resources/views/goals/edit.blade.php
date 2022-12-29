@@ -25,15 +25,15 @@
                     </div>
                     <div class="body">
                         <h2>Content</h2>
-                        <input name='goal[body]' value="{{ $goal->body }}">
+                        <textarea name="goal[body]" placeholder="内容"/>{!! nl2br(htmlspecialchars($goal->body)) !!}</textarea>
                     </div>
                     <div class="reward">
                         <h2>Reward</h2>
-                        <input name='goal[reward]' value="{{ $goal->reward }}">
+                        <textarea name="goal[rewars]" placeholder="ご褒美"/>{!! nl2br(htmlspecialchars($goal->reward)) !!}</textarea>
                     </div>
                     <div class="penalty">
                         <h2>Penalty</h2>
-                        <input name='goal[penalty]' value="{{ $goal->penalty }}">
+                        <textarea name="goal[penalty]" placeholder="罰"/>{!! nl2br(htmlspecialchars($goal->penalty)) !!}</textarea>
                     </div>
                     <br>
                     <div class="btn store">

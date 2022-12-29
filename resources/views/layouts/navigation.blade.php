@@ -16,7 +16,7 @@
                     {{ __('Calendar') }}
                 </x-nav-link>
                 <x-nav-link :href="route('goal')" :active="request()->routeIs('goal')">
-                    {{ __('Goal') }}
+                    {{ __('Goal setting') }}
                 </x-nav-link>
                 </div>
             </div>
@@ -40,7 +40,6 @@
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
-
                             <x-dropdown-link :href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
@@ -77,16 +76,17 @@
                 <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
                 <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
             </div>
-
             <div class="mt-3 space-y-1">
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
-
                     <x-responsive-nav-link :href="route('logout')"
                             onclick="event.preventDefault();
                                         this.closest('form').submit();">
                         {{ __('Log Out') }}
+                    </x-responsive-nav-link>
+                     <x-responsive-nav-link :href="route('goal')" :active="request()->routeIs('goal')">
+                    {{ __('Goal setting') }}
                     </x-responsive-nav-link>
                 </form>
             </div>

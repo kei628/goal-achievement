@@ -25,11 +25,11 @@
                     </div>
                     <div class="body">
                         <h2>Things I have done</h2>
-                        <input name='calendar[body]' value="{{ $calendar->body }}">
+                        <textarea name="calendar[body]" placeholder="今日したこと">{!! nl2br(htmlspecialchars($calendar->body)) !!}</textarea>
                     </div>
                     <div class="memo">
                         <h2>Diary</h2>
-                        <input name='calendar[memo]' value="{{ $calendar->memo }}">
+                        <textarea name="calendar[memo]" placeholder="日記">{!! nl2br(htmlspecialchars($calendar->memo)) !!}</textarea>
                     </div>
                     <br>
                     <div class="btn store">

@@ -25,8 +25,7 @@
                     </div>
                     <div class="body">
                         <h2>Content</h2>
-                        {{ $goal->body }}
-                    </div>
+                       <p>{!! nl2br(htmlspecialchars($goal->body)) !!}</p>
                     <div class="reward">
                         <h2>Reward</h2>
                         {{ $goal->reward }}

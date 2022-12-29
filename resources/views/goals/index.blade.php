@@ -23,7 +23,7 @@
                             <a href="/goals/{{ $goal->id }}">~{{ $goal->targetDate }}までのGoal~ <a>
                         </h1>
                         <h2 class='title'>{{ $goal->title }}</h2>
-                        <h1 class='body'>{{ $goal->body }}</h1>
+                        <h1 class='body'>{!! nl2br(htmlspecialchars($goal->body)) !!}</h1>
                         <div class='yoko'>
                             <div class="btn edit">
                                 <a href="/goals/{{ $goal->id }}/edit">edit</a>

@@ -29,7 +29,7 @@
                     </div>
                     <div class="reward">
                         <h2>Reward</h2>
-                        <textarea name="goal[rewars]" placeholder="ご褒美"/>{!! nl2br(htmlspecialchars($goal->reward)) !!}</textarea>
+                        <textarea name="goal[reward]" placeholder="ご褒美"/>{!! nl2br(htmlspecialchars($goal->reward)) !!}</textarea>
                     </div>
                     <div class="penalty">
                         <h2>Penalty</h2>
